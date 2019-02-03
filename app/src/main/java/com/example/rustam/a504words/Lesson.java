@@ -16,6 +16,7 @@ public class Lesson extends AppCompatActivity {
     private Button go;
     private TextView from;
     private TextView to;
+    static ArrayList<String> array;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +49,7 @@ public class Lesson extends AppCompatActivity {
                             .setAction("Action", null).show();
                 }else {
                     Intent myIntent = new Intent(Lesson.this, Started.class);
-                    ArrayList<String> array = new ArrayList<>(new Words(n_from, n_to).getwords());
-                    myIntent.putStringArrayListExtra("array", array);
+                    array = new ArrayList<>(new Words(n_from, n_to).getwords());
                     startActivity(myIntent);
                 }
             }

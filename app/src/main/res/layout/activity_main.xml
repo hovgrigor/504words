@@ -12,18 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginLeft="96dp"
-        android:layout_marginTop="177dp"
         android:layout_marginEnd="95dp"
         android:layout_marginRight="95dp"
-        android:layout_marginBottom="12dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/B2"
+        app:layout_constraintBottom_toTopOf="@+id/B3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/B2"
@@ -33,9 +28,8 @@
         android:layout_marginLeft="96dp"
         android:layout_marginEnd="95dp"
         android:layout_marginRight="95dp"
-        android:layout_marginBottom="40dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/B3"
+        app:layout_constraintBottom_toTopOf="@+id/B1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />

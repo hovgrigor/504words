@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent =  getIntent();
         array = intent.getStringArrayListExtra("array");
-        System.out.println(array.size());
         B1.setText(getrandom());
         B2.setText(getrandom());
         B3.setText(getrandom());
@@ -274,15 +273,14 @@ public class MainActivity extends AppCompatActivity {
         int random = (int)(Math.random() * array.size());
         String temp = array.get(random);
         array.remove(random);
-        System.out.println(array.size());
         return temp;
     }
 
     private Runnable Timer_Tick = new Runnable() {
         public void run() {
             time++;
-            thetime.setText(time);
-            if(time > 60){
+            thetime.setText(60 - time + "");
+            if(60 - time == 0){
                 Intent intent = new Intent(MainActivity.this, Started.class);
                 intent.putExtra("points", points);
                 startActivity(intent);

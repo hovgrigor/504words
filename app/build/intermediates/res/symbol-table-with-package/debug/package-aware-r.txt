@@ -1033,6 +1033,8 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id Team1
+id Team2
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1210,6 +1212,8 @@ id textSpacerNoTitle
 id textStart
 id textView2
 id textView3
+id textView5
+id textView6
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
