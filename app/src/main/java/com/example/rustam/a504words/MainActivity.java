@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private int points = 0;
     private int refresh = 5;
     ArrayList<String> array;
-    private Timer myTimer;
+    private static Timer myTimer;
     private int time = 0;
 
     @Override
@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         B4.setBackgroundColor(Color.WHITE);
         B5.setBackgroundColor(Color.WHITE);
 
+
+
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                         B4.setBackgroundColor(Color.WHITE);
                         B5.setBackgroundColor(Color.WHITE);
                     }else {
+                        myTimer.cancel();
                         Intent intent = new Intent(MainActivity.this, Started.class);
                         intent.putExtra("points", points);
                         startActivity(intent);
@@ -144,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         B4.setBackgroundColor(Color.WHITE);
                         B5.setBackgroundColor(Color.WHITE);
                     }else {
+                        myTimer.cancel();
                         Intent intent = new Intent(MainActivity.this, Started.class);
                         intent.putExtra("points", points);
                         startActivity(intent);
@@ -179,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                         B4.setBackgroundColor(Color.WHITE);
                         B5.setBackgroundColor(Color.WHITE);
                     }else {
+                        myTimer.cancel();
                         Intent intent = new Intent(MainActivity.this, Started.class);
                         intent.putExtra("points", points);
                         startActivity(intent);
@@ -214,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
                         B4.setBackgroundColor(Color.WHITE);
                         B5.setBackgroundColor(Color.WHITE);
                     }else {
+                        myTimer.cancel();
                         Intent intent = new Intent(MainActivity.this, Started.class);
                         intent.putExtra("points", points);
                         startActivity(intent);
@@ -250,6 +256,7 @@ public class MainActivity extends AppCompatActivity {
                         B4.setBackgroundColor(Color.WHITE);
                         B5.setBackgroundColor(Color.WHITE);
                     }else {
+                        myTimer.cancel();
                         Intent intent = new Intent(MainActivity.this, Started.class);
                         intent.putExtra("points", points);
                         startActivity(intent);
@@ -281,6 +288,7 @@ public class MainActivity extends AppCompatActivity {
             time++;
             thetime.setText(60 - time + "");
             if(60 - time == 0){
+                myTimer.cancel();
                 Intent intent = new Intent(MainActivity.this, Started.class);
                 intent.putExtra("points", points);
                 startActivity(intent);
