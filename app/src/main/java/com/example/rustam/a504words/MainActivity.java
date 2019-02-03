@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> array;
     private static Timer myTimer;
     private int time = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
