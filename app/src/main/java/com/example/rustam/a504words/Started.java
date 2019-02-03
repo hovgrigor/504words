@@ -36,8 +36,6 @@ public class Started extends AppCompatActivity {
         start = findViewById(R.id.b_start);
         Intent intent =  getIntent();
         final ArrayList<String> array = intent.getStringArrayListExtra("array");
-        System.out.println("YEEEES");
-
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

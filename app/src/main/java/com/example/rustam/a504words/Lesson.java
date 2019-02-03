@@ -44,7 +44,7 @@ public class Lesson extends AppCompatActivity {
                     Snackbar.make(v, "Number Should Be Less Than 42", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }else if(n_to < n_from){
-                    Snackbar.make(v, "'To' Should Be Bigger Than 'From'", Snackbar.LENGTH_LONG)
+                    Snackbar.make(v, "To Should Be Bigger Than From", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }else {
                     Intent myIntent = new Intent(Lesson.this, Started.class);
