@@ -92,31 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     once_B1 = false;
                 }
-                if(points >= refresh){
-                    refresh += 5;
-                    if(array.size() >= 5) {
-                        once_B1 = true;
-                        once_B2 = true;
-                        once_B3 = true;
-                        once_B4 = true;
-                        once_B5 = true;
-                        B1.setText(getrandom());
-                        B2.setText(getrandom());
-                        B3.setText(getrandom());
-                        B4.setText(getrandom());
-                        B5.setText(getrandom());
-                        B1.setBackgroundColor(Color.WHITE);
-                        B2.setBackgroundColor(Color.WHITE);
-                        B3.setBackgroundColor(Color.WHITE);
-                        B4.setBackgroundColor(Color.WHITE);
-                        B5.setBackgroundColor(Color.WHITE);
-                    }else {
-                        myTimer.cancel();
-                        Intent intent = new Intent(MainActivity.this, Started.class);
-                        intent.putExtra("points", points);
-                        startActivity(intent);
-                    }
-                }
+                refresh();
             }
         });
 
@@ -128,31 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     once_B2 = false;
                 }
-                if(points >= refresh){
-                    refresh += 5;
-                    if(array.size() >= 5) {
-                        once_B1 = true;
-                        once_B2 = true;
-                        once_B3 = true;
-                        once_B4 = true;
-                        once_B5 = true;
-                        B1.setText(getrandom());
-                        B2.setText(getrandom());
-                        B3.setText(getrandom());
-                        B4.setText(getrandom());
-                        B5.setText(getrandom());
-                        B1.setBackgroundColor(Color.WHITE);
-                        B2.setBackgroundColor(Color.WHITE);
-                        B3.setBackgroundColor(Color.WHITE);
-                        B4.setBackgroundColor(Color.WHITE);
-                        B5.setBackgroundColor(Color.WHITE);
-                    }else {
-                        myTimer.cancel();
-                        Intent intent = new Intent(MainActivity.this, Started.class);
-                        intent.putExtra("points", points);
-                        startActivity(intent);
-                    }
-                }
+                refresh();
             }
         });
 
@@ -164,31 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     once_B3 = false;
                 }
-                if(points >= refresh){
-                    refresh += 5;
-                    if(array.size() >= 5) {
-                        once_B1 = true;
-                        once_B2 = true;
-                        once_B3 = true;
-                        once_B4 = true;
-                        once_B5 = true;
-                        B1.setText(getrandom());
-                        B2.setText(getrandom());
-                        B3.setText(getrandom());
-                        B4.setText(getrandom());
-                        B5.setText(getrandom());
-                        B1.setBackgroundColor(Color.WHITE);
-                        B2.setBackgroundColor(Color.WHITE);
-                        B3.setBackgroundColor(Color.WHITE);
-                        B4.setBackgroundColor(Color.WHITE);
-                        B5.setBackgroundColor(Color.WHITE);
-                    }else {
-                        myTimer.cancel();
-                        Intent intent = new Intent(MainActivity.this, Started.class);
-                        intent.putExtra("points", points);
-                        startActivity(intent);
-                    }
-                }
+                refresh();
             }
         });
 
@@ -200,31 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     once_B4 = false;
                 }
-                if(points >= refresh){
-                    refresh += 5;
-                    if(array.size() >= 5) {
-                        once_B1 = true;
-                        once_B2 = true;
-                        once_B3 = true;
-                        once_B4 = true;
-                        once_B5 = true;
-                        B1.setText(getrandom());
-                        B2.setText(getrandom());
-                        B3.setText(getrandom());
-                        B4.setText(getrandom());
-                        B5.setText(getrandom());
-                        B1.setBackgroundColor(Color.WHITE);
-                        B2.setBackgroundColor(Color.WHITE);
-                        B3.setBackgroundColor(Color.WHITE);
-                        B4.setBackgroundColor(Color.WHITE);
-                        B5.setBackgroundColor(Color.WHITE);
-                    }else {
-                        myTimer.cancel();
-                        Intent intent = new Intent(MainActivity.this, Started.class);
-                        intent.putExtra("points", points);
-                        startActivity(intent);
-                    }
-                }
+                refresh();
             }
         });
 
@@ -236,34 +140,38 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     once_B5 = false;
                 }
-
-                if(points >= refresh){
-                    refresh += 5;
-                    if(array.size() >= 5) {
-                        once_B1 = true;
-                        once_B2 = true;
-                        once_B3 = true;
-                        once_B4 = true;
-                        once_B5 = true;
-                        B1.setText(getrandom());
-                        B2.setText(getrandom());
-                        B3.setText(getrandom());
-                        B4.setText(getrandom());
-                        B5.setText(getrandom());
-                        B1.setBackgroundColor(Color.WHITE);
-                        B2.setBackgroundColor(Color.WHITE);
-                        B3.setBackgroundColor(Color.WHITE);
-                        B4.setBackgroundColor(Color.WHITE);
-                        B5.setBackgroundColor(Color.WHITE);
-                    }else {
-                        myTimer.cancel();
-                        Intent intent = new Intent(MainActivity.this, Started.class);
-                        intent.putExtra("points", points);
-                        startActivity(intent);
-                    }
-                }
+                refresh();
             }
         });
+    }
+
+    private void refresh(){
+        if(points >= refresh){
+            refresh += 5;
+            if(array.size() >= 5) {
+                once_B1 = true;
+                once_B2 = true;
+                once_B3 = true;
+                once_B4 = true;
+                once_B5 = true;
+                B1.setText(getrandom());
+                B2.setText(getrandom());
+                B3.setText(getrandom());
+                B4.setText(getrandom());
+                B5.setText(getrandom());
+                B1.setBackgroundColor(Color.WHITE);
+                B2.setBackgroundColor(Color.WHITE);
+                B3.setBackgroundColor(Color.WHITE);
+                B4.setBackgroundColor(Color.WHITE);
+                B5.setBackgroundColor(Color.WHITE);
+            }else {
+                myTimer.cancel();
+                Intent intent = new Intent(MainActivity.this, Started.class);
+                intent.putExtra("points", points);
+                startActivity(intent);
+            }
+        }
+
     }
 
     private void TimerMethod()
