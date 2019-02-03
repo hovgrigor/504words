@@ -21,8 +21,7 @@ public class Started extends AppCompatActivity {
     static int team;
     static int points_t1;
     static int points_t2;
-
-
+    boolean preventSecondClick = false;
 
     @Override
     public void onBackPressed() {
@@ -101,9 +100,12 @@ public class Started extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(Started.this, MainActivity.class);
-                myIntent.putStringArrayListExtra("array", array);
-                startActivity(myIntent);
+                if(!preventSecondClick) {
+                    preventSecondClick = true;
+                    Intent myIntent = new Intent(Started.this, MainActivity.class);
+                    myIntent.putStringArrayListExtra("array", array);
+                    startActivity(myIntent);
+                }
             }
         });
 

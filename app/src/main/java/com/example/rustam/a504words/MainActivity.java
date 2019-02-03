@@ -46,10 +46,13 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> array;
     private static Timer myTimer;
     private int time = 0;
+    boolean preventSecondClick = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         thetime = findViewById(R.id.thetime);
         myTimer = new Timer();
@@ -183,10 +186,13 @@ public class MainActivity extends AppCompatActivity {
                 B4.setBackgroundColor(Color.WHITE);
                 B5.setBackgroundColor(Color.WHITE);
             }else {
-                myTimer.cancel();
-                Intent intent = new Intent(MainActivity.this, Started.class);
-                intent.putExtra("points", points);
-                startActivity(intent);
+                if(!preventSecondClick) {
+                    preventSecondClick = true;
+                    myTimer.cancel();
+                    Intent intent = new Intent(MainActivity.this, Started.class);
+                    intent.putExtra("points", points);
+                    startActivity(intent);
+                }
             }
     }
 

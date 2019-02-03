@@ -23,6 +23,7 @@ public class Lesson extends AppCompatActivity {
     private TextView ptw;
     static ArrayList<String> array;
     static int ptw_n;
+    boolean preventSecondClick = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +59,16 @@ public class Lesson extends AppCompatActivity {
                     Snackbar.make(v, "Points To Win Should Be Bigger Than 0", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }else {
-                    team = 0;
-                    points_t1 = 0;
-                    points_t2 = 0;
-                    ptw_n = temp;
-                    Intent myIntent = new Intent(Lesson.this, Started.class);
-                    array = new ArrayList<>(new Words(n_from, n_to).getwords());
-                    startActivity(myIntent);
+                    if(!preventSecondClick) {
+                        preventSecondClick = true;
+                        team = 0;
+                        points_t1 = 0;
+                        points_t2 = 0;
+                        ptw_n = temp;
+                        Intent myIntent = new Intent(Lesson.this, Started.class);
+                        array = new ArrayList<>(new Words(n_from, n_to).getwords());
+                        startActivity(myIntent);
+                    }
                 }
             }
         });
