@@ -1152,6 +1152,7 @@ id pin
 id play
 id progress_circular
 id progress_horizontal
+id ptw
 id radio
 id right
 id right_icon

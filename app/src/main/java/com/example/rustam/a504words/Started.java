@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import static com.example.rustam.a504words.Lesson.array;
+import static com.example.rustam.a504words.Lesson.ptw_n;
 
 public class Started extends AppCompatActivity {
     private Button start;
@@ -66,7 +67,7 @@ public class Started extends AppCompatActivity {
         f_team.setText(points_t1 + "");
         s_team.setText(points_t2 + "");
 
-        if(points_t1 >= 1){
+        if(points_t1 >= ptw_n){
             new AlertDialog.Builder(this)
                     .setMessage("First Team Wins!!!")
                     .setCancelable(false)
@@ -79,7 +80,7 @@ public class Started extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }).show();
-        }else if(points_t2 >= 30){
+        }else if(points_t2 >= ptw_n){
             new AlertDialog.Builder(this)
                     .setMessage("Second Team Wins!!!")
                     .setCancelable(false)
