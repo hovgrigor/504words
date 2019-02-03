@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.example.rustam.a504words.Started.points_t1;
+import static com.example.rustam.a504words.Started.points_t2;
+import static com.example.rustam.a504words.Started.team;
+
 
 public class Lesson extends AppCompatActivity {
 
@@ -54,6 +58,9 @@ public class Lesson extends AppCompatActivity {
                     Snackbar.make(v, "Points To Win Should Be Bigger Than 0", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }else {
+                    team = 0;
+                    points_t1 = 0;
+                    points_t2 = 0;
                     ptw_n = temp;
                     Intent myIntent = new Intent(Lesson.this, Started.class);
                     array = new ArrayList<>(new Words(n_from, n_to).getwords());

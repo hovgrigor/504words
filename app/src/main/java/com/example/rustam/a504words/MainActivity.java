@@ -35,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
     private Button B4;
     private Button B5;
     private TextView thetime;
+    private Button b_next;
     private boolean once_B1 = true;
     private boolean once_B2 = true;
     private boolean once_B3 = true;
     private boolean once_B4 = true;
     private boolean once_B5 = true;
     private int points = 0;
-    private int refresh = 5;
+    private int refresh = 0;
     ArrayList<String> array;
     private static Timer myTimer;
     private int time = 0;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         B3 = findViewById(R.id.B3);
         B4 = findViewById(R.id.B4);
         B5 = findViewById(R.id.B5);
+        b_next = findViewById(R.id.b_next);
 
         Intent intent =  getIntent();
         array = intent.getStringArrayListExtra("array");
@@ -79,7 +81,12 @@ public class MainActivity extends AppCompatActivity {
         B4.setBackgroundColor(Color.WHITE);
         B5.setBackgroundColor(Color.WHITE);
 
-
+        b_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                refresh();
+            }
+        });
 
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,9 +94,12 @@ public class MainActivity extends AppCompatActivity {
                 if(once_B1) {
                     B1.setBackgroundColor(Color.GREEN);
                     points++;
+                    refresh++;
                     once_B1 = false;
                 }
-                refresh();
+                if(refresh == 5) {
+                    refresh();
+                }
             }
         });
 
@@ -98,10 +108,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(once_B2) {
                     B2.setBackgroundColor(Color.GREEN);
+                    refresh++;
                     points++;
                     once_B2 = false;
                 }
-                refresh();
+                if(refresh == 5) {
+                    refresh();
+                }
             }
         });
 
@@ -111,9 +124,12 @@ public class MainActivity extends AppCompatActivity {
                 if(once_B3) {
                     B3.setBackgroundColor(Color.GREEN);
                     points++;
+                    refresh++;
                     once_B3 = false;
                 }
-                refresh();
+                if(refresh == 5) {
+                    refresh();
+                }
             }
         });
 
@@ -123,9 +139,12 @@ public class MainActivity extends AppCompatActivity {
                 if(once_B4) {
                     B4.setBackgroundColor(Color.GREEN);
                     points++;
+                    refresh++;
                     once_B4 = false;
                 }
-                refresh();
+                if(refresh == 5) {
+                    refresh();
+                }
             }
         });
 
@@ -135,17 +154,19 @@ public class MainActivity extends AppCompatActivity {
                 if(once_B5) {
                     B5.setBackgroundColor(Color.GREEN);
                     points++;
+                    refresh++;
                     once_B5 = false;
                 }
-                refresh();
+                if(refresh == 5) {
+                    refresh();
+                }
             }
         });
     }
 
     private void refresh(){
-        if(points >= refresh){
-            refresh += 5;
             if(array.size() >= 5) {
+                refresh = 0;
                 once_B1 = true;
                 once_B2 = true;
                 once_B3 = true;
@@ -167,8 +188,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("points", points);
                 startActivity(intent);
             }
-        }
-
     }
 
     private void TimerMethod()
