@@ -15,6 +15,6 @@ public class Words {
     }
 
     public List<String> getwords(){
-        return words.subList(from - 1,to);
+        return words.subList((from - 1)  * 12, to * 12);
     }
 }
