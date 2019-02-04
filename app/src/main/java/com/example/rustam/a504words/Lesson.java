@@ -39,36 +39,37 @@ public class Lesson extends AppCompatActivity {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int n_from = Integer.valueOf(from.getText().toString());
-                int n_to = Integer.valueOf(to.getText().toString());
-                int temp = Integer.valueOf(ptw.getText().toString());
-                System.out.println("From: " + n_from + "   " + "To: " + n_to);
-                if(from.getText().toString().isEmpty() || to.getText().toString().isEmpty()|| ptw.getText().toString().isEmpty()) {
-                    Snackbar.make(v, "Fill The Boxes", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }else if(n_from == 0 || n_to == 0){
-                    Snackbar.make(v, "The Number Can't Be 0", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }else if(n_from > 42 || n_to > 42){
-                    Snackbar.make(v, "Number Should Be Less Than 42", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }else if(n_to < n_from){
-                    Snackbar.make(v, "To Should Be Bigger Than From", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }else if(temp <= 0){
-                    Snackbar.make(v, "Points To Win Should Be Bigger Than 0", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }else {
-                    if(!preventSecondClick) {
-                        preventSecondClick = true;
-                        team = 0;
-                        points_t1 = 0;
-                        points_t2 = 0;
-                        ptw_n = temp;
-                        Intent myIntent = new Intent(Lesson.this, Started.class);
-                        array = new ArrayList<>(new Words(n_from, n_to).getwords());
-                        startActivity(myIntent);
+                try {
+                    if (from.getText().toString().isEmpty() || to.getText().toString().isEmpty() || ptw.getText().toString().isEmpty()) {
+                        Snackbar.make(v, "Fill The Boxes", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else if (Integer.valueOf(from.getText().toString()) == 0 || Integer.valueOf(to.getText().toString()) == 0) {
+                        Snackbar.make(v, "The Number Can't Be 0", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else if (Integer.valueOf(from.getText().toString()) > 42 || Integer.valueOf(to.getText().toString()) > 42) {
+                        Snackbar.make(v, "Number Should Be Less Than 42", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else if (Integer.valueOf(to.getText().toString()) < Integer.valueOf(from.getText().toString())) {
+                        Snackbar.make(v, "To Should Be Bigger Than From", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else if (Integer.valueOf(ptw.getText().toString()) <= 0) {
+                        Snackbar.make(v, "Points To Win Should Be Bigger Than 0", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else {
+                        if (!preventSecondClick) {
+                            preventSecondClick = true;
+                            team = 0;
+                            points_t1 = 0;
+                            points_t2 = 0;
+                            ptw_n = Integer.valueOf(ptw.getText().toString());
+                            Intent myIntent = new Intent(Lesson.this, Started.class);
+                            array = new ArrayList<>(new Words(Integer.valueOf(from.getText().toString()), Integer.valueOf(to.getText().toString())).getwords());
+                            startActivity(myIntent);
+                        }
                     }
+                }catch(Exception x){
+                    Snackbar.make(v, "Error", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
             }
         });
