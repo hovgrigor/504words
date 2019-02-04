@@ -1000,6 +1000,12 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_button1
+drawable ic_button2
+drawable ic_button3
+drawable ic_button4
+drawable ic_button5
+drawable ic_button6
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
