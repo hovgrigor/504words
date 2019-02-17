@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import static com.example.rustam.a504words.Started.team;
 
 public class Lesson extends AppCompatActivity {
 
-    private Button go;
+    private ImageButton go;
     private TextView from;
     private TextView to;
     private TextView ptw;

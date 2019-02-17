@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Main extends AppCompatActivity {
 
-    private Button play;
-    private Button exit;
+    private ImageButton play;
+    private ImageButton about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         play = findViewById(R.id.play);
-        exit = findViewById(R.id.exit);
+        about = findViewById(R.id.b_about);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,11 +26,10 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        exit.setOnClickListener(new View.OnClickListener() {
+        about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                System.exit(0);
+                startActivity(new Intent(Main.this, About.class));
             }
         });
     }

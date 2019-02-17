@@ -8,13 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import static com.example.rustam.a504words.Lesson.array;
 import static com.example.rustam.a504words.Lesson.ptw_n;
 
 public class Started extends AppCompatActivity {
-    private Button start;
+    private ImageButton start;
     private TextView t_team;
     private TextView f_team;
     private TextView s_team;

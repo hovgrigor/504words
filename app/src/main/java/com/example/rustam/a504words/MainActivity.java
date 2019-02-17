@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private Button B4;
     private Button B5;
     private TextView thetime;
-    private Button b_next;
     private boolean once_B1 = true;
     private boolean once_B2 = true;
     private boolean once_B3 = true;
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         B3 = findViewById(R.id.B3);
         B4 = findViewById(R.id.B4);
         B5 = findViewById(R.id.B5);
-        b_next = findViewById(R.id.b_next);
 
         Intent intent =  getIntent();
         array = intent.getStringArrayListExtra("array");
@@ -84,12 +82,6 @@ public class MainActivity extends AppCompatActivity {
         B4.setBackgroundColor(Color.WHITE);
         B5.setBackgroundColor(Color.WHITE);
 
-        b_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                refresh();
-            }
-        });
 
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +91,11 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     refresh++;
                     once_B1 = false;
+                }else {
+                    B1.setBackgroundColor(Color.WHITE);
+                    points--;
+                    refresh--;
+                    once_B1 = true;
                 }
                 if(refresh == 5) {
                     refresh();
@@ -114,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
                     refresh++;
                     points++;
                     once_B2 = false;
+                }else {
+                    B2.setBackgroundColor(Color.WHITE);
+                    points--;
+                    refresh--;
+                    once_B2 = true;
                 }
                 if(refresh == 5) {
                     refresh();
@@ -129,6 +131,11 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     refresh++;
                     once_B3 = false;
+                }else{
+                    B3.setBackgroundColor(Color.WHITE);
+                    points--;
+                    refresh--;
+                    once_B3 = true;
                 }
                 if(refresh == 5) {
                     refresh();
@@ -144,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     refresh++;
                     once_B4 = false;
+                }else{
+                    B4.setBackgroundColor(Color.WHITE);
+                    points--;
+                    refresh--;
+                    once_B4 = true;
                 }
                 if(refresh == 5) {
                     refresh();
@@ -159,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
                     points++;
                     refresh++;
                     once_B5 = false;
+                }else {
+                    B5.setBackgroundColor(Color.WHITE);
+                    points--;
+                    refresh--;
+                    once_B5 = true;
                 }
                 if(refresh == 5) {
                     refresh();

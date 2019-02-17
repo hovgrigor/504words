@@ -252,7 +252,9 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
+attr freezesAnimation
 attr gapBetweenBars
+attr gifSource
 attr goIcon
 attr headerLayout
 attr height
@@ -282,6 +284,7 @@ attr indeterminateProgressStyle
 attr initialActivityCount
 attr insetForeground
 attr isLightTheme
+attr isOpaque
 attr itemBackground
 attr itemHorizontalPadding
 attr itemHorizontalTranslationEnabled
@@ -992,25 +995,33 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable about
 drawable avd_hide_password
 drawable avd_show_password
+drawable b_about
+drawable babout_ispressed
+drawable babout_pressed
+drawable bgo
+drawable bgo_ispressed
+drawable bgo_pressed
+drawable bplay
+drawable bplay_ispressed
+drawable bplay_pressed
+drawable bstart
+drawable bstart_ispressed
+drawable bstart_pressed
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable ic_button1
-drawable ic_button2
-drawable ic_button3
-drawable ic_button4
-drawable ic_button5
-drawable ic_button6
 drawable ic_launcher_background
-drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable icon_background
+drawable mainbackground
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1026,6 +1037,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable tenor
+drawable title
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1066,8 +1079,8 @@ id all
 id always
 id async
 id auto
+id b_about
 id b_go
-id b_next
 id b_start
 id barrier
 id beginning
@@ -1103,7 +1116,6 @@ id edit_query
 id end
 id enterAlways
 id enterAlwaysCollapsed
-id exit
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1123,6 +1135,8 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
+id imageView2
 id info
 id invisible
 id italic
@@ -1218,6 +1232,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView2
 id textView3
 id textView5
@@ -1295,6 +1310,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about
 layout activity_lesson
 layout activity_main
 layout activity_main2
@@ -1921,6 +1937,8 @@ styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LinearConstraintLayout android_orientation
