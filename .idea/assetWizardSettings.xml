@@ -18,12 +18,23 @@
                                 <PersistentState>
                                   <option name="children">
                                     <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="2" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="foregroundImage">
                                         <value>
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="trimmed" value="true" />
+                                                <entry key="scalingPercent" value="65" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,9 +44,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\Rustam\Documents\Android\504Words\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png" />
+                                      <entry key="backgroundImage" value="C:\Users\Rustam\Documents\Android\504Words\app\src\main\res\drawable\icon_background.xml" />
+                                      <entry key="foregroundImage" value="C:\Users\Rustam\Desktop\Grigor\504 words(design)\MainLogo (2).png" />
                                       <entry key="legacyIconShape" value="NONE" />
-                                      <entry key="previewDensity" value="XXXHIGH" />
                                       <entry key="webIconShape" value="NONE" />
                                     </map>
                                   </option>
@@ -52,7 +63,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="paddingPercent" value="15" />
+                                                <entry key="paddingPercent" value="10" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -63,15 +74,37 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="cropped" value="true" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="C:\Users\Rustam\Desktop\MainLogo.png" />
+                                      <entry key="imageAsset" value="C:\Users\Rustam\Desktop\Grigor\504 words(design)\MainLogo (2).png" />
                                       <entry key="outputName" value="ic_launcher_round" />
                                     </map>
                                   </option>
                                 </PersistentState>
                               </value>
                             </entry>
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="vectorAssetStep">
+                    <value>
+                      <PersistentState>
+                        <option name="values">
+                          <map>
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_mainlogo__2_" />
+                            <entry key="sourceFile" value="C:\Users\Rustam\Desktop\Grigor\504 words(design)\MainLogo-_2_.psd" />
                           </map>
                         </option>
                       </PersistentState>
