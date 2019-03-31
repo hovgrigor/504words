@@ -1,6 +1,7 @@
 package com.example.rustam.a504words;
 
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class Lesson extends AppCompatActivity {
     private TextView ptw;
     static ArrayList<String> array;
     static int ptw_n;
-    boolean preventSecondClick = false;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,10 @@ public class Lesson extends AppCompatActivity {
                         Snackbar.make(v, "Points To Win Should Be Bigger Than 0", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     } else {
-                        if (!preventSecondClick) {
-                            preventSecondClick = true;
+                        if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                            return;
+                        }
+                            mLastClickTime = SystemClock.elapsedRealtime();
                             team = 0;
                             points_t1 = 0;
                             points_t2 = 0;
@@ -66,7 +69,7 @@ public class Lesson extends AppCompatActivity {
                             Intent myIntent = new Intent(Lesson.this, Started.class);
                             array = new ArrayList<>(new Words(Integer.valueOf(from.getText().toString()), Integer.valueOf(to.getText().toString())).getwords());
                             startActivity(myIntent);
-                        }
+
                     }
                 }catch(Exception x){
                     Snackbar.make(v, "Error", Snackbar.LENGTH_LONG)

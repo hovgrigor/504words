@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Feb 17 17:02:42 AMT 2019
+#Sun Mar 31 12:48:38 AMT 2019
 7.path=lib/mips/libpl_droidsonroids_gif.so
 2.base=C\:\\Users\\Rustam\\Documents\\Android\\504Words\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\1
 5.set=DEX

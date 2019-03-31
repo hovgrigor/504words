@@ -2,6 +2,7 @@ package com.example.rustam.a504words;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ public class Started extends AppCompatActivity {
     static int team;
     static int points_t1;
     static int points_t2;
-    boolean preventSecondClick = false;
+    private long mLastClickTime = 0;
 
     @Override
     public void onBackPressed() {
@@ -101,13 +102,14 @@ public class Started extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!preventSecondClick) {
-                    preventSecondClick = true;
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                    mLastClickTime = SystemClock.elapsedRealtime();
                     Intent myIntent = new Intent(Started.this, MainActivity.class);
                     myIntent.putStringArrayListExtra("array", array);
                     startActivity(myIntent);
                 }
-            }
         });
 
     }
